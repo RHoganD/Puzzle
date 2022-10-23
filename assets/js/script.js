@@ -1,15 +1,15 @@
 const rows = 3;
-const columns = 3;
+const columns = 5;
 
-var currTile;
-var otherTile;  //blank tile
+let currTile;
+let otherTile;  
 
 
 
-const turns = 0;
+let turns = 0;
 
-// let imgOrder = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]; //name of the pictures
-var imgOrder = ["4", "2", "8", "5", "1", "6", "7", "9", "3"];
+// let imgOrder = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15" ]; //name of the pictures
+let imgOrder = ["01", "02", "03", "05", "04", "06", "07", "08", "09", "10", "12", "11", "13", "14", "15"];
 
 window.onload = function() {
     for (let r=0; r < rows; r++) {
@@ -18,7 +18,7 @@ window.onload = function() {
             //<img id="0-0" src="1.jpg">
             let tile = document.createElement("img");
             tile.id = r.toString() + "-" + c.toString();
-            tile.src = imgOrder.shift() + ".gif";
+            tile.src = imgOrder.shift() + ".jpg";
                                    
 
             //DRAG FUNCTIONALITY EventListener
@@ -59,11 +59,36 @@ function dragDrop() {
 }
 
 function dragEnd() {
-    let currImg = currTile.src;
-    let otherImg = otherTile.src;
+    if (!otherTile.src.includes("01.jpg")) {
+        return;
+    }
+ 
+    let currCoords = currTile.id.split("-"); //ex) "0-0" -> ["0", "0"]
+    let r = parseInt(currCoords[0]);
+    let c = parseInt(currCoords[1]);
 
-    currTile.src = otherImg;
-    otherTile.src = currImg;
+    let otherCoords = otherTile.id.split("-");
+    let r2 = parseInt(otherCoords[0]);
+    let c2 = parseInt(otherCoords[1]);
 
+    let moveLeft = r == r2 && c2 == c-1;
+    let moveRight = r == r2 && c2 == c+1;
+
+    let moveUp = c == c2 && r2 == r-1;
+    let moveDown = c == c2 && r2 == r+1;
+
+    let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
+
+
+   if (isAdjacent){
+        let currImg = currTile.src;
+        let otherImg = otherTile.src;
+
+        currTile.src = otherImg;
+        otherTile.src = currImg;
+
+        turns +=1;
+        document.getElementById("turns").innerText=turns;
+   }
 
 }

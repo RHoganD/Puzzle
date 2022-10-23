@@ -34,10 +34,10 @@ body{
     }
     
     .header{
-    background-color: #fff;
+    background-color: lightblue;
     box-shadow: 1px 1px, 4px 0 rgba(0,0,0, .1);
     position: fixed;
-    width: 360px;
+    width: 587px;
     /* margin-right: 118px;
     margin-top: 10px;
     margin-bottom: 200px; */
@@ -50,13 +50,13 @@ body{
     padding:0;
     list-style: none;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #333;
     }
     
     
     .header ul a{
     display: block;
-    outline: 1px solid red;
+    outline: 1px solid #333;
     padding: 20px;
     border-right: 1px solid #aaa;
     text-decoration: none;
@@ -151,13 +151,13 @@ body{
     
      
      
-.main-board {
+/* .main-board {
     margin-top: 50px;
     background-color: red;
     max-width: 1000px;
     box-shadow: #000;
-    height: auto;
-}
+    height: auto; */
+
 
 #title {
     height: 150px;
@@ -166,7 +166,7 @@ body{
 
 
     #board {
-        width: 378px;
+        width: 610px;
         height: 378px;
         background-color: lightblue;
         border: 10px solid #0c67ae;
