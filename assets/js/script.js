@@ -4,8 +4,6 @@ const columns = 5;
 let currTile;
 let otherTile;  
 
-
-
 let turns = 0;
 
 // let imgOrder = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15" ]; //name of the pictures

@@ -8,19 +8,20 @@
     <title>Puzzle</title>
 </head>
 <body>
-    <!-- <div id="main_container"> -->
+
+    
         <div><h1 class="logo">Frozen Puzzle!</h1> </div>
         
     <header class="header">
         <input class="menu-btn" type="checkbox" id="menu-btn"/>
         <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
         <ul class="menu">
-        <!-- <li><a href="#rules">Rule</a></li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#exit">Exit</a></li> -->
+        
        <button id="rule" class="btn">Rule</button>
        <button id="exit" class="btn">Exit</button>
-       <button id="reveal" class="btn">Reveal Puzzle</button>
+       <input id="reveal" class="btn" type="button" onClick="openWindow()" value="Reveal Puzzle">
+        
+      
        
        
 <!-- The Modal -->
@@ -28,11 +29,11 @@
 
   <!-- Modal content -->
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h4>The Rules are simple</h4>
-    <p>1- You can swap the image with the adjacent image.</p>
-    <p>2- sample text in the modal..</p>
-    <p>3- Some text in the Modal..</p>
+    <span class="close">x</span>
+    <h4 class="rule-title"><span>The Rules are simple</span></h4>
+    <p class="info">1. You can swap the image with the adjacent.</p>
+    <p class="info">2- sample text in the modal..</p>
+    <p class="info">3- Some text in the Modal..</p>
   
   </div>
   </div>
