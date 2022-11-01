@@ -47,7 +47,7 @@ msgWindow = window.open('','popup','width=' + popW + ',height=' + popH +
 
 msgWindow.document.write 
     ('<HTML><HEAD><TITLE>Reveal Puzzle</TITLE></HEAD><BODY><FORM  NAME="form1">' +
-    '<img src="/elsa_and_anna_frozen.jpg"/>'+
+    '<img src="./assets/images/elsa_and_anna_frozen.jpg"/>'+
     ' <H1>Completed Puzzle Image.</H1>' + ' Click the button below to close the window.<br />' +
     '<INPUT TYPE="button" VALUE="OK"onClick="window.close();"></FORM></BODY>   </HTML>');
 }

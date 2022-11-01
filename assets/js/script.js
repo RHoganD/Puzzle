@@ -7,7 +7,7 @@
 // let turns = 0;
 
 // // let imgOrder = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15" ]; //name of the pictures
-// let imgOrder = ["01", "02", "03", "05", "04", "06", "07", "08", "09", "10", "12", "11", "13", "14", "15"];
+// let imgOrder = ["1", "2", "3", "5", "4", "6", "7", "8", "9", "10", "12", "11", "13", "14", "15"];
 
 // window.onload = function() {
 //     for (let r=0; r < rows; r++) {
@@ -57,7 +57,7 @@
 // }
 
 // function dragEnd() {
-//     if (!otherTile.src.includes("01.jpg")) {
+//     if (!otherTile.src.includes("blank.jpg")) {
 //         return;
 //     }
  
@@ -106,7 +106,7 @@ window.onload = function() {
 
             //<img>
             let tile = document.createElement("img");
-            tile.src = "./images/blank.jpg";
+            tile.src = "./assets/images/blank.jpg";
 
             //DRAG FUNCTIONALITY
             tile.addEventListener("dragstart", dragStart); //click on image to drag
@@ -137,7 +137,7 @@ window.onload = function() {
 
     for (let i = 0; i < pieces.length; i++) {
         let tile = document.createElement("img");
-        tile.src = "./images/" + pieces[i] + ".jpg";
+        tile.src = "./assets/images/" + pieces[i] + ".jpg";
 
         //DRAG FUNCTIONALITY
         tile.addEventListener("dragstart", dragStart); //click on image to drag
