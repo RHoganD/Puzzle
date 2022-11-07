@@ -185,4 +185,20 @@ function dragEnd() {
     document.getElementById("turns").innerText = turns;
 }
 
+const modalI = document.querySelector('#success-modal');
+modalI.style.display = 'block';
+
+// script.onFinished = function() {
+//   console.log("Show good job dialog");
+
+  setTimeout(() => {
+    modalI.classList.add('open');
+    this.el.classList.add('blur-it')
+  }, 500);
+  modalI.querySelector('.trigger').onclick = () => {
+    modalI.classList.remove('open');
+    this.el.classList.remove('blur-it');
+  }
+
+};
 
